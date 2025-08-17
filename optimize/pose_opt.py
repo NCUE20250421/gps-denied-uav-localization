@@ -747,17 +747,17 @@ def test_2img(args):
 
 	plt.figure()
 	plt.subplot(2, 2, 1)
-	plt.imshow(plt_tens_to_np(img_tens[0,:,:,:]))
+	plt.imshow(plt_axis_match_tens(img_tens[0,:,:,:]))
 	plt.title('Original')
 
 	plt.subplot(2, 2, 2)
-	plt.imshow(plt_tens_to_np(img_tens_w[0,:,:,:]))
+	plt.imshow(plt_axis_match_tens(img_tens_w[0,:,:,:]))
 	plt.title('Warped')
 
 	img_tens_uw, _ = dlk.warp_hmg(img_tens, torch.from_numpy(P_opt).float())
 
 	plt.subplot(2, 2, 4)
-	plt.imshow(plt_tens_to_np(img_tens_uw[0,:,:,:]))
+	plt.imshow(plt_axis_match_tens(img_tens_uw[0,:,:,:]))
 	plt.title('LK Warped')
 
 	plt.show()
