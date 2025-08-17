@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, '../deep_feat') # to reach DeepLKBatch
+#sys.path.insert(0, '../deep_feat') # to reach DeepLKBatch
 import deep_feat.DeepLKBatch as dlk
 import deep_feat.sift_ransac_homography as srh
 
